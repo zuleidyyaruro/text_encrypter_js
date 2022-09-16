@@ -1,0 +1,256 @@
+/*  ====== VARIABLES ====== */
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    --clr-primary-11: hsl(205, 100%, 98%);
+
+    /* darkest grey - used for headings */
+    --clr-grey-1: #0A3871;
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+
+    --clr-white: #fff;
+
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+
+    --clr-black: #222;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+/*  ====== FIN VARIABLES ====== */
+
+/*  ======== GRID ============ */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.row{
+    display: flex;  
+    width: 100%;
+    text-align: center;  
+    flex-wrap: wrap; 
+    /* wrap permite que los elementos que no quepan se muevan a otra fila */
+    padding: 3px;
+    height: 100%;
+}
+
+.card {
+    border: 8px solid var(--clr-primary-10);
+    /* background-color: blue; */
+    padding: 10px;
+    border-radius: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+  
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 992px) {
+    .col-lg-1 {width: 8.33%;}
+    .col-lg-2 {width: 16.66%;}
+    .col-lg-3 {width: 25%;}
+    .col-lg-4 {width: 33.33%;}
+    .col-lg-5 {width: 41.66%;}
+    .col-lg-6 {width: 50%;}
+    .col-lg-7 {width: 58.33%;}
+    .col-lg-8 {width: 66.66%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {width: 100%;}
+}
+
+/*  ======== FIN GRID ============ */
+
+/*  ========  GLOBALES ======== */
+
+.border {
+    border: 1px solid black;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/*  ========  FIN GLOBALES ======== */
+
+body {
+    background-color: var(--clr-primary-10);
+    font-family: 'Merriweather', serif;
+    height: 100vh;
+}
+
+/* nav */
+
+nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav img {
+    width: 150px;
+}
+
+.title {
+    color:var(--clr-grey-1);
+    text-transform: capitalize;
+}
+
+/*  ====== Main ====== */
+
+textarea {
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: none;
+    background-color: var(--clr-primary-11);;
+    padding: 20px;
+    font-size: 1.2rem;
+    color:var(--clr-grey-1)
+}
+
+textarea::placeholder {
+    color:var(--clr-grey-1);
+    font-size: 1.3rem;
+}
+
+main {
+    height: 85%;
+}
+
+.btn {
+    border-radius: 18px;
+    padding: 20px 80px;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-crypt {
+    background-color: var(--clr-grey-1);
+    color: var(--clr-white);
+    border: none;
+}
+
+.btn-decrypt {
+    background-color: var(--clr-grey-9);
+    color: var(--clr-grey-1);
+    border: var(--clr-grey-1) 1px solid;
+}
+
+.btn-copy {
+    background-color:var(--clr-white);
+    color: var(--clr-grey-1);
+    border: var(--clr-grey-1) 1px solid;
+}
+
+.card-img-crypt {
+    background-color: var(--clr-primary-11);
+    height: 100%;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card-img-crypt img {
+    width: 350px;
+}
+
+.p-no-message {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--clr-grey-2);
+    text-transform: capitalize;
+}
+
+.p-enter-text {
+    color: var(--clr-grey-2);
+    text-transform: capitalize;
+}
+
+.show-text {
+    color:var(--clr-grey-1);
+}

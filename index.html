@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Textos</title>
+
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <nav class="container">
+        <div>
+            <img src="./assets/img/logo.png" alt="">
+        </div>
+        <h1 class="title">text encryptor</h1>
+    </nav>
+
+    <main class="container">
+
+        <div class="row">
+
+            <section class=" col-lg-8 card ">
+
+                <textarea id="text" placeholder="Enter the text here"></textarea>
+
+                <div>
+                    <button class="btn btn-crypt" id="encrypt">crypt</button>
+                    <button class="btn btn-decrypt" id="decrypt">decrypt</button>
+                </div>
+
+            </section>
+
+            <section class=" col-lg-4 card ">
+                <div class="card-img-crypt" id="img-or-text">
+                    <p id="show-text" class="show-text"></p>
+                    <!-- <button class="button" id="copy">copy</button> -->
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets//js/sweet-alert.js"></script>
+</body>
+
+</html>
